@@ -1,3 +1,3 @@
-# v0.0.11.0
- * [`d77e576`](https://github.com/lucaspopp0/hass-updatemanager/commit/d77e576) use json instead of yaml
+# v0.0.12.0
+ * [`54bf505`](https://github.com/lucaspopp0/hass-updatemanager/commit/54bf505) adjust prefix detection
 
