@@ -1,6 +1,10 @@
 package homeassistant
 
-import "github.com/goccy/go-yaml"
+import (
+	"strings"
+
+	"github.com/goccy/go-yaml"
+)
 
 type Update struct {
 	EntityID     string
@@ -31,15 +35,7 @@ func isUpdate(entityState EntityState) (*Update, bool) {
 		return nil, false
 	}
 
-	if update.FriendlyName == "" {
-		return nil, false
-	}
-
-	if update.LatestVersion == "" {
-		return nil, false
-	}
-
-	if update.InstalledVersion == "" {
+	if !strings.HasPrefix("update.", entityState.EntityID) {
 		return nil, false
 	}
 
