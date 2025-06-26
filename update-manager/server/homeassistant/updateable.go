@@ -1,6 +1,7 @@
 package homeassistant
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/goccy/go-yaml"
@@ -27,15 +28,18 @@ func isUpdate(entityState EntityState) (*Update, bool) {
 
 	attrBytes, err := yaml.Marshal(entityState.Attributes)
 	if err != nil {
+		fmt.Printf("error in marshaling: %v\n", err.Error())
 		return nil, false
 	}
 
 	err = yaml.Unmarshal(attrBytes, &update)
 	if err != nil {
+		fmt.Printf("error in unmarshaling: %v\n", err.Error())
 		return nil, false
 	}
 
 	if !strings.HasPrefix("update.", entityState.EntityID) {
+		fmt.Printf("entity %q missing prefix\n", entityState.EntityID)
 		return nil, false
 	}
 
