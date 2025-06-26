@@ -1,22 +1,21 @@
 package homeassistant
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
-
-	"github.com/goccy/go-yaml"
 )
 
 type Update struct {
 	EntityID     string
-	FriendlyName string `yaml:"friendly_name"`
+	FriendlyName string `json:"friendly_name"`
 
-	AutoUpdate bool `yaml:"auto_update"`
+	AutoUpdate bool `json:"auto_update"`
 
-	InstalledVersion string `yaml:"installed_version"`
-	LatestVersion    string `yaml:"latest_version"`
+	InstalledVersion string `json:"installed_version"`
+	LatestVersion    string `json:"latest_version"`
 
-	InProgress bool `yaml:"in_progress"`
+	InProgress bool `json:"in_progress"`
 
 	// More fields available
 }
@@ -26,13 +25,13 @@ func isUpdate(entityState EntityState) (*Update, bool) {
 		EntityID: entityState.EntityID,
 	}
 
-	attrBytes, err := yaml.Marshal(entityState.Attributes)
+	attrBytes, err := json.Marshal(entityState.Attributes)
 	if err != nil {
 		fmt.Printf("error in marshaling: %v\n", err.Error())
 		return nil, false
 	}
 
-	err = yaml.Unmarshal(attrBytes, &update)
+	err = json.Unmarshal(attrBytes, &update)
 	if err != nil {
 		fmt.Printf("error in unmarshaling: %v\n", err.Error())
 		return nil, false
