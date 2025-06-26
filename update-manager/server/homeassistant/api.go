@@ -48,7 +48,7 @@ type API interface {
 	coreAPI
 	addonsAPI
 
-	ListExecutables() (Executables, error)
+	ListUpdates() ([]Update, error)
 
 	// Tries to identify the service automatically and execute it
 	Execute(
@@ -81,22 +81,6 @@ func (c *apiClient) do(req *http.Request) (*http.Response, error) {
 	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", c.cfg.SupervisorToken))
 
 	return http.DefaultClient.Do(req)
-}
-
-func (c *apiClient) ListExecutables() (Executables, error) {
-	entityStates, err := c.GetStates()
-	if err != nil {
-		return nil, err
-	}
-
-	executables := Executables{}
-	for _, es := range entityStates {
-		if executable, ok := isExecutable(es); ok {
-			executables[es.EntityID] = executable
-		}
-	}
-
-	return executables, nil
 }
 
 func (c *apiClient) GetStates() ([]EntityState, error) {

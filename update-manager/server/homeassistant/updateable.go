@@ -1,0 +1,71 @@
+package homeassistant
+
+import "github.com/goccy/go-yaml"
+
+type Update struct {
+	EntityID     string
+	FriendlyName string `yaml:"friendly_name"`
+
+	AutoUpdate bool `yaml:"auto_update"`
+
+	InstalledVersion string `yaml:"installed_version"`
+	LatestVersion    string `yaml:"latest_version"`
+
+	InProgress bool `yaml:"in_progress"`
+
+	// More fields available
+}
+
+func isUpdate(entityState EntityState) (*Update, bool) {
+	update := &Update{
+		EntityID: entityState.EntityID,
+	}
+
+	attrBytes, err := yaml.Marshal(entityState.Attributes)
+	if err != nil {
+		return nil, false
+	}
+
+	err = yaml.Unmarshal(attrBytes, &update)
+	if err != nil {
+		return nil, false
+	}
+
+	if update.FriendlyName == "" {
+		return nil, false
+	}
+
+	if update.LatestVersion == "" {
+		return nil, false
+	}
+
+	if update.InstalledVersion == "" {
+		return nil, false
+	}
+
+	return update, true
+}
+
+func (c *apiClient) ListUpdates() ([]Update, error) {
+	entityStates, err := c.GetStates()
+	if err != nil {
+		return nil, err
+	}
+
+	updates := []Update{}
+	for _, es := range entityStates {
+		if update, ok := isUpdate(es); ok {
+			updates = append(updates, *update)
+		}
+	}
+
+	return updates, nil
+}
+
+func (c *apiClient) InstallUpdate(entityID string) error {
+	_, err := c.CallService("update/install", map[string]any{
+		"entity_id": entityID,
+	})
+
+	return err
+}
