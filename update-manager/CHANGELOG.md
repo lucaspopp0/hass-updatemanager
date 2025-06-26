@@ -1,3 +1,3 @@
-# v0.0.13.0
- * [`9cedafe`](https://github.com/lucaspopp0/hass-updatemanager/commit/9cedafe) log entities
+# v0.0.14.0
+ * [`572cd54`](https://github.com/lucaspopp0/hass-updatemanager/commit/572cd54) prefix fix
 
