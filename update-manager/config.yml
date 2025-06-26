@@ -12,6 +12,7 @@ arch:
   - i386
 startup: application
 init: false
+hassio_api: true
 homeassistant_api: true
 hassio_role: default
 panel_title: 'Update Manager'
