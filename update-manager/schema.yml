@@ -1,7 +1,7 @@
 groups:
   - name: # group name
     schedule: daily | weekly | monthly | quarterly
-    request_approval: true
+    skip_approval: true
     update_types: major | minor | patch
     # If no entities in list, matches all entities
     entities:
@@ -9,4 +9,4 @@ groups:
     
 catchall:
   schedule: daily | weekly | monthly | quarterly
-  request_approval: true
+  skip_approval: true

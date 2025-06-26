@@ -9,7 +9,7 @@ import (
 )
 
 type Update struct {
-	EntityID     string
+	EntityID     string `json:"entity_id"`
 	FriendlyName string `json:"friendly_name"`
 
 	AutoUpdate bool `json:"auto_update"`
@@ -20,6 +20,10 @@ type Update struct {
 	InProgress bool `json:"in_progress"`
 
 	// More fields available
+}
+
+func (u Update) UpdateAvailable() bool {
+	return u.InstalledVersion != u.LatestVersion
 }
 
 func isUpdate(entityState EntityState) (*Update, bool) {

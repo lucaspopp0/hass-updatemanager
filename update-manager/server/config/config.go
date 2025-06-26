@@ -4,16 +4,11 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/lucaspopp0/hass-update-manager/update-manager/model"
 	"github.com/lucaspopp0/hass-update-manager/update-manager/util"
 )
 
 func configFile() string {
 	return util.GetEnv("SWITCHES_JSON", "/data/switches.json")
-}
-
-type Config struct {
-	Switches map[string]model.Switch `json:"switches"`
 }
 
 func FromFile() (*Config, error) {
