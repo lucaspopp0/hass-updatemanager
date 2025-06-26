@@ -37,8 +37,8 @@ func isUpdate(entityState EntityState) (*Update, bool) {
 		return nil, false
 	}
 
-	if !strings.HasPrefix("update.", entityState.EntityID) {
-		fmt.Printf("entity %q missing prefix\n", entityState.EntityID)
+	if !strings.HasPrefix("update.", update.EntityID) {
+		fmt.Printf("entity %q missing prefix\n", update.EntityID)
 		return nil, false
 	}
 
