@@ -1,3 +1,3 @@
-# v0.0.10.0
- * [`5be588b`](https://github.com/lucaspopp0/hass-updatemanager/commit/5be588b) isupdate logs
+# v0.0.11.0
+ * [`d77e576`](https://github.com/lucaspopp0/hass-updatemanager/commit/d77e576) use json instead of yaml
 
