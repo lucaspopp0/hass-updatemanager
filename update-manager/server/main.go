@@ -12,10 +12,10 @@ func main() {
 		SupervisorToken: util.GetEnv("SUPERVISOR_TOKEN", ""),
 	})
 
-	updates, err := hass.ListUpdates()
+	states, err := hass.GetStates()
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(util.MarshalIndent(updates))
+	fmt.Println(util.MarshalIndent(states))
 }
