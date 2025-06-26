@@ -1,3 +1,3 @@
-# v0.0.12.0
- * [`54bf505`](https://github.com/lucaspopp0/hass-updatemanager/commit/54bf505) adjust prefix detection
+# v0.0.13.0
+ * [`9cedafe`](https://github.com/lucaspopp0/hass-updatemanager/commit/9cedafe) log entities
 
