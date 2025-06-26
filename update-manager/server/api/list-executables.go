@@ -23,7 +23,7 @@ func (s *server) RegisterListExecutables(api huma.API) {
 	huma.Register(api, huma.Operation{
 		Method:      http.MethodGet,
 		OperationID: "list-executables",
-		Path:        "/api/executables",
+		Path:        "/executables",
 		Errors: []int{
 			http.StatusInternalServerError,
 		},

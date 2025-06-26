@@ -14,7 +14,6 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/lucaspopp0/hass-update-manager/update-manager/api/middleware"
-	"github.com/lucaspopp0/hass-update-manager/update-manager/ble"
 	"github.com/lucaspopp0/hass-update-manager/update-manager/config"
 	"github.com/lucaspopp0/hass-update-manager/update-manager/homeassistant"
 	"github.com/lucaspopp0/hass-update-manager/update-manager/model"
@@ -39,8 +38,6 @@ type server struct {
 
 	mExecutables sync.Mutex
 	executables  homeassistant.Executables
-
-	bleService *ble.Service
 
 	scripts []string
 }
@@ -68,12 +65,6 @@ func (s *server) onStart() {
 
 	if err != nil {
 		fmt.Printf("Home assistant service call failed: %v\n", err.Error())
-	}
-
-	fmt.Println("Initializing BLE service...")
-	s.bleService, err = ble.NewService()
-	if err != nil {
-		fmt.Printf("Failed to initialize BLE service: %v\n", err.Error())
 	}
 
 	addonInfo, err := s.ha.GetAddOnInfo("self")
@@ -105,12 +96,8 @@ func NewServer() humacli.CLI {
 		s.router = chi.NewMux()
 
 		s.router.Use(AllowCORS)
-		s.router.Use(SiteMiddleware(os.Getenv(envLocal) == "true"))
 
 		cfg := huma.DefaultConfig("Smart Switches", "")
-		cfg.DocsPath = "/api/docs"
-		cfg.SchemasPath = "/api/schemas"
-		cfg.OpenAPIPath = "/api/openapi"
 
 		cfg.Servers = []*huma.Server{
 			{
