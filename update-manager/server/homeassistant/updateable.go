@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+
+	"github.com/lucaspopp0/hass-update-manager/update-manager/util"
 )
 
 type Update struct {
@@ -21,6 +23,8 @@ type Update struct {
 }
 
 func isUpdate(entityState EntityState) (*Update, bool) {
+	fmt.Printf("evaluating entity %v\n", util.MarshalIndent(entityState))
+
 	update := &Update{
 		EntityID: entityState.EntityID,
 	}
