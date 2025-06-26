@@ -1,0 +1,12 @@
+groups:
+  - name: # group name
+    schedule: daily | weekly | monthly | quarterly
+    request_approval: true
+    update_types: major | minor | patch
+    # If no entities in list, matches all entities
+    entities:
+      - # update entities
+    
+catchall:
+  schedule: daily | weekly | monthly | quarterly
+  request_approval: true
