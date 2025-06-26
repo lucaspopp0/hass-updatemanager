@@ -1,3 +1,3 @@
-# v0.0.3.0
- * [`fc83fc8`](https://github.com/lucaspopp0/hass-updatemanager/commit/fc83fc8) some cleanup
+# v0.0.4.0
+ * [`c0555d8`](https://github.com/lucaspopp0/hass-updatemanager/commit/c0555d8) list updates
 
