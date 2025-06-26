@@ -1,5 +1,3 @@
 # update-manager
 
-A Home Assistant Add-On for managing smart lightswitches!
-
-Consists of a frontend site, and backend server
+A Home Assistant add-on for automating updates
