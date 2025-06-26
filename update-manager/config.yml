@@ -1,4 +1,4 @@
-version: "0.0.0.0"
+version: "0.0.1.1"
 name: "Update Manager"
 description: "Configurable update automations"
 slug: "update-manager"
@@ -14,11 +14,9 @@ startup: application
 init: false
 homeassistant_api: true
 hassio_role: default
-
 panel_title: 'Update Manager'
 panel_icon: 'mdi:clock-fast'
 panel_admin: false
-
 ingress: true
 ingress_port: 8124
 ingress_stream: true
