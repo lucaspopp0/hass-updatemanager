@@ -1,3 +1,3 @@
-# v0.0.1.1
- * [`59f9dcb`](https://github.com/lucaspopp0/hass-updatemanager/commit/59f9dcb) readme updates
+# v0.0.2.0
+ * [`6015940`](https://github.com/lucaspopp0/hass-updatemanager/commit/6015940) dockerfile fix
 
