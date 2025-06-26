@@ -8,11 +8,11 @@ FROM $BUILD_FROM AS homeassistant
 COPY --from=go /usr/local/go /usr/local/go
 ENV PATH "/usr/local/go/bin:$PATH"
 
-RUN mkdir -p /smartswitches/server
+RUN mkdir -p /update-manager/server
 
-COPY ./server /smartswitches/server
+COPY ./server /update-manager/server
 
-WORKDIR /smartswitches/server
+WORKDIR /update-manager/server
 RUN go get ./...
 RUN CG_ENABLED=0 go build -o server .
 
