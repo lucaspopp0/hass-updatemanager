@@ -9,10 +9,8 @@ COPY --from=go /usr/local/go /usr/local/go
 ENV PATH "/usr/local/go/bin:$PATH"
 
 RUN mkdir -p /smartswitches/server
-RUN mkdir -p /smartswitches/site/public
 
 COPY ./server /smartswitches/server
-COPY ./site/public /smartswitches/site/public
 
 WORKDIR /smartswitches/server
 RUN go get ./...
