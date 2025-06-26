@@ -1,0 +1,63 @@
+name: detect-changes
+
+on:
+  workflow_call:
+    outputs:
+      bot-change:
+        value: ${{ jobs.detect-changes.outputs.bot-change }}
+      changes:
+        description: "A JSON array of changed filters"
+        value: ${{ jobs.detect-changes.outputs.changes }}
+      update-manager:
+        value: ${{ contains(fromJson(jobs.detect-changes.outputs.changes), 'update-manager' )}}
+      server:
+        value: ${{ contains(fromJson(jobs.detect-changes.outputs.changes), 'server')}}
+      site:
+        value: ${{ contains(fromJson(jobs.detect-changes.outputs.changes), 'site')}}
+      workflows:
+        value: ${{ contains(fromJson(jobs.detect-changes.outputs.changes), 'workflows' )}}
+      version-update:
+        value: ${{ contains(fromJson(jobs.detect-changes.outputs.changes), 'version-update' )}}
+
+permissions:
+  contents: read
+  pull-requests: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      bot-change: ${{ steps.detect-bot.outputs.detected }}
+      changes: ${{ steps.path-filters.outputs.changes }}
+    steps:
+      -
+        name: Detect bot
+        id: detect-bot
+        run: |
+          echo "detected=${{ github.actor == 'lucaspopp0-bot[bot]' }}" | tee -a "$GITHUB_OUTPUT"
+      -
+        uses: actions/checkout@v4
+      -
+        name: Detect changes
+        uses: dorny/paths-filter@v3
+        id: path-filters
+        with:
+          filters: |
+            update-manager:
+              - 'update-manager/**'
+              - '.github/workflows/docker-build.yml'
+            server:
+              - 'update-manager/server/**'
+              - '.github/workflows/docker-build.yml'
+            site:
+              - 'update-manager/server/spec/**'
+              - 'update-manager/site/**'
+            workflows:
+              - '.github/workflows/**'
+            version-update:
+              - '.github/workflows/version-update.yml'

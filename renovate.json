@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":automergePr",
+    ":automergeStableNonMajor"
+  ],
+  "packageRules": [
+    {
+      "groupName": "go-server",
+      "matchDatasources": ["go"],
+      "matchFileNames": ["update-manager/server/**"]
+    },
+    {
+      "groupName": "docker",
+      "matchDatasources": ["docker"],
+      "matchFileNames": ["update-manager/**"]
+    },
+    {
+      "groupName": "github-actions",
+      "matchFileNames": [
+        ".github/workflows/**",
+        ".github/actions/**"
+      ]
+    },
+    {
+      "groupName": "site",
+      "matchFileNames": [
+        "update-manager/site/**"
+      ]
+    }
+  ]
+}
