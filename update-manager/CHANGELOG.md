@@ -1,3 +1,3 @@
-# v0.0.15.0
- * [`ddc37eb`](https://github.com/lucaspopp0/hass-updatemanager/commit/ddc37eb) checkpoint
+# v0.0.16.0
+ * [`9f0eb22`](https://github.com/lucaspopp0/hass-updatemanager/commit/9f0eb22) Update golang Docker tag to v1.24.5 (#1)
 
