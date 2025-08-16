@@ -50,6 +50,8 @@ type API interface {
 
 	ListUpdates() ([]UpdateEntity, error)
 
+	InstallUpdates(entityIDs []string) error
+
 	// Tries to identify the service automatically and execute it
 	Execute(
 		entityID string,

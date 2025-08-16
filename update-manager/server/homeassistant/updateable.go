@@ -3,6 +3,7 @@ package homeassistant
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
 )
 
 type UpdateEntity EntityState[UpdateAttributes]
@@ -25,6 +26,10 @@ func (u UpdateEntity) UpdateAvailable() bool {
 }
 
 func isUpdate(entityState EntityState[map[string]any]) (*UpdateEntity, bool) {
+	if !strings.HasPrefix(entityState.EntityID, "update.") {
+		return nil, false
+	}
+
 	entityBytes, err := json.Marshal(entityState)
 	if err != nil {
 		fmt.Printf("error in marshaling: %v\n", err.Error())
@@ -57,9 +62,9 @@ func (c *apiClient) ListUpdates() ([]UpdateEntity, error) {
 	return updates, nil
 }
 
-func (c *apiClient) InstallUpdate(entityID string) error {
+func (c *apiClient) InstallUpdates(entityIDs []string) error {
 	_, err := c.CallService("update/install", map[string]any{
-		"entity_id": entityID,
+		"entity_id": entityIDs,
 	})
 
 	return err
