@@ -1,3 +1,3 @@
-# v0.0.18.0
- * [`1868432`](https://github.com/lucaspopp0/hass-updatemanager/commit/1868432) validate prefix
+# v0.0.19.0
+ * [`fa1e634`](https://github.com/lucaspopp0/hass-updatemanager/commit/fa1e634) print current time
 
