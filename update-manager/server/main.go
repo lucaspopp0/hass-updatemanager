@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/lucaspopp0/hass-update-manager/update-manager/homeassistant"
 	"github.com/lucaspopp0/hass-update-manager/update-manager/util"
@@ -18,4 +19,6 @@ func main() {
 	}
 
 	fmt.Println(util.MarshalIndent(updates))
+
+	fmt.Printf("Current time: %v\n", time.Now().Format(time.DateTime))
 }
