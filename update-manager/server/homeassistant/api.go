@@ -20,10 +20,10 @@ var (
 	)
 )
 
-type EntityState struct {
-	EntityID   string         `json:"entity_id"`
-	State      string         `json:"state"`
-	Attributes map[string]any `json:"attributes,omitempty"`
+type EntityState[A any] struct {
+	EntityID   string `json:"entity_id"`
+	State      string `json:"state"`
+	Attributes A      `json:"attributes,omitempty"`
 }
 
 type AddOn struct {
@@ -36,8 +36,8 @@ type addonsAPI interface {
 }
 
 type coreAPI interface {
-	GetStates() ([]EntityState, error)
-	GetEntityStates(entityID string) ([]EntityState, error)
+	GetStates() ([]EntityState[map[string]any], error)
+	GetEntityStates(entityID string) ([]EntityState[map[string]any], error)
 
 	// CallService executes POST /core/api/services/{servicePath}
 	// with the specified payload as the body if desired
@@ -48,7 +48,7 @@ type API interface {
 	coreAPI
 	addonsAPI
 
-	ListUpdates() ([]Update, error)
+	ListUpdates() ([]UpdateEntity, error)
 
 	// Tries to identify the service automatically and execute it
 	Execute(
@@ -83,7 +83,7 @@ func (c *apiClient) do(req *http.Request) (*http.Response, error) {
 	return http.DefaultClient.Do(req)
 }
 
-func (c *apiClient) GetStates() ([]EntityState, error) {
+func (c *apiClient) GetStates() ([]EntityState[map[string]any], error) {
 	req, err := http.NewRequest(http.MethodGet, c.requestURL("core/api/states"), http.NoBody)
 	if err != nil {
 		return nil, err
@@ -103,7 +103,7 @@ func (c *apiClient) GetStates() ([]EntityState, error) {
 		return nil, fmt.Errorf("%v error: %s", resp.StatusCode, string(body))
 	}
 
-	states := []EntityState{}
+	states := []EntityState[map[string]any]{}
 	err = json.Unmarshal(body, &states)
 	if err != nil {
 		return nil, err
@@ -112,7 +112,7 @@ func (c *apiClient) GetStates() ([]EntityState, error) {
 	return states, nil
 }
 
-func (c *apiClient) GetEntityStates(entityID string) ([]EntityState, error) {
+func (c *apiClient) GetEntityStates(entityID string) ([]EntityState[map[string]any], error) {
 	req, err := http.NewRequest(http.MethodGet, c.requestURL(fmt.Sprintf("core/api/states/%s", entityID)), http.NoBody)
 	if err != nil {
 		return nil, err
@@ -132,7 +132,7 @@ func (c *apiClient) GetEntityStates(entityID string) ([]EntityState, error) {
 		return nil, fmt.Errorf("%v error: %s", resp.StatusCode, string(body))
 	}
 
-	states := []EntityState{}
+	states := []EntityState[map[string]any]{}
 	err = json.Unmarshal(body, &states)
 	if err != nil {
 		return nil, err
