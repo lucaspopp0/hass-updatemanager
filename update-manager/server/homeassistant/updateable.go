@@ -3,13 +3,11 @@ package homeassistant
 import (
 	"encoding/json"
 	"fmt"
-	"strings"
-
-	"github.com/lucaspopp0/hass-update-manager/update-manager/util"
 )
 
-type Update struct {
-	EntityID     string `json:"entity_id"`
+type UpdateEntity EntityState[UpdateAttributes]
+
+type UpdateAttributes struct {
 	FriendlyName string `json:"friendly_name"`
 
 	AutoUpdate bool `json:"auto_update"`
@@ -22,44 +20,34 @@ type Update struct {
 	// More fields available
 }
 
-func (u Update) UpdateAvailable() bool {
-	return u.InstalledVersion != u.LatestVersion
+func (u UpdateEntity) UpdateAvailable() bool {
+	return u.Attributes.InstalledVersion != u.Attributes.LatestVersion
 }
 
-func isUpdate(entityState EntityState) (*Update, bool) {
-	fmt.Printf("evaluating entity %v\n", util.MarshalIndent(entityState))
-
-	update := &Update{
-		EntityID: entityState.EntityID,
-	}
-
-	attrBytes, err := json.Marshal(entityState.Attributes)
+func isUpdate(entityState EntityState[map[string]any]) (*UpdateEntity, bool) {
+	entityBytes, err := json.Marshal(entityState)
 	if err != nil {
 		fmt.Printf("error in marshaling: %v\n", err.Error())
 		return nil, false
 	}
 
-	err = json.Unmarshal(attrBytes, &update)
+	update := UpdateEntity{}
+	err = json.Unmarshal(entityBytes, &update)
 	if err != nil {
 		fmt.Printf("error in unmarshaling: %v\n", err.Error())
 		return nil, false
 	}
 
-	if !strings.HasPrefix(update.EntityID, "update.") {
-		fmt.Printf("entity %q missing prefix\n", update.EntityID)
-		return nil, false
-	}
-
-	return update, true
+	return &update, true
 }
 
-func (c *apiClient) ListUpdates() ([]Update, error) {
+func (c *apiClient) ListUpdates() ([]UpdateEntity, error) {
 	entityStates, err := c.GetStates()
 	if err != nil {
 		return nil, err
 	}
 
-	updates := []Update{}
+	updates := []UpdateEntity{}
 	for _, es := range entityStates {
 		if update, ok := isUpdate(es); ok {
 			updates = append(updates, *update)
