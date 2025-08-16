@@ -1,18 +1,6 @@
 package config
 
-type Schedule string
-
-const (
-	ASAP   Schedule = "asap"
-	Daily  Schedule = "daily"
-	Weekly Schedule = "weekly"
-)
-
-var ValidSchedules = []Schedule{
-	ASAP,
-	Daily,
-	Weekly,
-}
+import "github.com/lucaspopp0/hass-update-manager/update-manager/schedule"
 
 type UpdateType string
 
@@ -22,24 +10,17 @@ const (
 	Patch UpdateType = "patch"
 )
 
-var ValidUpdateTypes = []UpdateType{
-	Major,
-	Minor,
-	Patch,
-}
-
 type Group struct {
-	Name         string       `yaml:"name"`
-	Schedule     Schedule     `yaml:"schedule"`
-	UpdateTypes  []UpdateType `yaml:"update_types"`
-	SkipApproval bool         `yaml:"skip_approval"`
-	Entities     []string     `yaml:"entities"`
+	Name         string            `yaml:"name"`
+	Schedule     schedule.Schedule `yaml:"schedule"`
+	SkipApproval bool              `yaml:"skip_approval"`
+	Entities     []string          `yaml:"entities"`
 }
 
 type Catchall struct {
-	Name         string   `yaml:"name"`
-	Schedule     Schedule `yaml:"schedule"`
-	SkipApproval bool     `yaml:"skip_approval"`
+	Name         string            `yaml:"name"`
+	Schedule     schedule.Schedule `yaml:"schedule"`
+	SkipApproval bool              `yaml:"skip_approval"`
 }
 
 type Config struct {
