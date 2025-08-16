@@ -22,7 +22,7 @@ type UpdateAttributes struct {
 }
 
 func (u UpdateEntity) UpdateAvailable() bool {
-	return u.Attributes.InstalledVersion != u.Attributes.LatestVersion
+	return u.State == "on"
 }
 
 func isUpdate(entityState EntityState[map[string]any]) (*UpdateEntity, bool) {
