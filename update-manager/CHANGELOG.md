@@ -1,3 +1,3 @@
-# v0.0.17.0
- * [`07200f9`](https://github.com/lucaspopp0/hass-updatemanager/commit/07200f9) chore: Improve parsing for update entities (#7)
+# v0.0.18.0
+ * [`1868432`](https://github.com/lucaspopp0/hass-updatemanager/commit/1868432) validate prefix
 
