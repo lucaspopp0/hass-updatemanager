@@ -260,7 +260,7 @@ func (c *apiClient) Restart() error {
 	}
 
 	if response.StatusCode >= 400 {
-		return fmt.Errorf(response.Status)
+		return fmt.Errorf("%v", response.Status)
 	}
 
 	return nil
