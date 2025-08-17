@@ -1,3 +1,3 @@
-# v0.0.23.0
- * [`ad70228`](https://github.com/lucaspopp0/hass-updatemanager/commit/ad70228) improve restart logic
+# v0.0.24.0
+ * [`c6ad00e`](https://github.com/lucaspopp0/hass-updatemanager/commit/c6ad00e) fix nit
 
