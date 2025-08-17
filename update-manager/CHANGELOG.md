@@ -1,3 +1,3 @@
-# v0.0.24.0
- * [`c6ad00e`](https://github.com/lucaspopp0/hass-updatemanager/commit/c6ad00e) fix nit
+# v0.0.25.0
+ * [`7a020af`](https://github.com/lucaspopp0/hass-updatemanager/commit/7a020af) chore(deps): update golang docker tag to v1.25.0 (#5)
 
