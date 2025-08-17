@@ -1,3 +1,3 @@
-# v0.0.22.0
- * [`d736cf2`](https://github.com/lucaspopp0/hass-updatemanager/commit/d736cf2) remove annoying log
+# v0.0.23.0
+ * [`ad70228`](https://github.com/lucaspopp0/hass-updatemanager/commit/ad70228) improve restart logic
 
