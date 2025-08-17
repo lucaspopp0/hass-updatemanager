@@ -62,10 +62,30 @@ func (c *apiClient) ListUpdates() ([]UpdateEntity, error) {
 	return updates, nil
 }
 
+func (c *apiClient) GetUpdate(entityID string) (*UpdateEntity, error) {
+	entity, err := c.GetState(entityID)
+	if err != nil {
+		return nil, err
+	}
+
+	update, ok := isUpdate(*entity)
+	if !ok {
+		return nil, fmt.Errorf("%v is not an update", entity.EntityID)
+	}
+
+	return update, nil
+}
+
 func (c *apiClient) InstallUpdates(entityIDs []string) error {
 	_, err := c.CallService("update/install", map[string]any{
 		"entity_id": entityIDs,
 	})
+
+	return err
+}
+
+func (c *apiClient) Restart() error {
+	_, err := c.CallService("homeassistant/restart", map[string]any{})
 
 	return err
 }

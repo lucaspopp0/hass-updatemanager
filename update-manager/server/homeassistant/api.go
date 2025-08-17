@@ -37,7 +37,7 @@ type addonsAPI interface {
 
 type coreAPI interface {
 	GetStates() ([]EntityState[map[string]any], error)
-	GetEntityStates(entityID string) ([]EntityState[map[string]any], error)
+	GetState(entityID string) (*EntityState[map[string]any], error)
 
 	// CallService executes POST /core/api/services/{servicePath}
 	// with the specified payload as the body if desired
@@ -49,8 +49,11 @@ type API interface {
 	addonsAPI
 
 	ListUpdates() ([]UpdateEntity, error)
+	GetUpdate(entityID string) (*UpdateEntity, error)
 
 	InstallUpdates(entityIDs []string) error
+
+	Restart() error
 
 	// Tries to identify the service automatically and execute it
 	Execute(
@@ -114,7 +117,7 @@ func (c *apiClient) GetStates() ([]EntityState[map[string]any], error) {
 	return states, nil
 }
 
-func (c *apiClient) GetEntityStates(entityID string) ([]EntityState[map[string]any], error) {
+func (c *apiClient) GetState(entityID string) (*EntityState[map[string]any], error) {
 	req, err := http.NewRequest(http.MethodGet, c.requestURL(fmt.Sprintf("core/api/states/%s", entityID)), http.NoBody)
 	if err != nil {
 		return nil, err
@@ -134,13 +137,13 @@ func (c *apiClient) GetEntityStates(entityID string) ([]EntityState[map[string]a
 		return nil, fmt.Errorf("%v error: %s", resp.StatusCode, string(body))
 	}
 
-	states := []EntityState[map[string]any]{}
-	err = json.Unmarshal(body, &states)
+	state := EntityState[map[string]any]{}
+	err = json.Unmarshal(body, &state)
 	if err != nil {
 		return nil, err
 	}
 
-	return states, nil
+	return &state, nil
 }
 
 func (c *apiClient) CallService(
