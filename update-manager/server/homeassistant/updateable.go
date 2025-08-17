@@ -83,9 +83,3 @@ func (c *apiClient) InstallUpdates(entityIDs []string) error {
 
 	return err
 }
-
-func (c *apiClient) Restart() error {
-	_, err := c.CallService("homeassistant/restart", map[string]any{})
-
-	return err
-}

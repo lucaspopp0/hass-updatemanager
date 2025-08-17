@@ -242,3 +242,26 @@ func (c *apiClient) GetAddOnInfo(addon string) (*AddOn, error) {
 
 	return info, nil
 }
+
+func (c *apiClient) Restart() error {
+	req, err := http.NewRequest(
+		http.MethodPost,
+		c.requestURL("core/restart"),
+		http.NoBody,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	response, err := c.do(req)
+	if err != nil {
+		return err
+	}
+
+	if response.StatusCode >= 400 {
+		return fmt.Errorf(response.Status)
+	}
+
+	return nil
+}
