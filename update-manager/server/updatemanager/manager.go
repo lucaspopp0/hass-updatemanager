@@ -27,10 +27,17 @@ type MaintenanceDetails struct {
 
 type manager struct {
 	Config
+
+	// A tracker for the number of available updates
+	availableUpdates int
 }
 
 func NewManager(cfg Config) Manager {
-	return &manager{cfg}
+	return &manager{
+		Config: cfg,
+
+		availableUpdates: -1,
+	}
 }
 
 func (m *manager) Run() error {
@@ -38,6 +45,24 @@ func (m *manager) Run() error {
 		updates, err := m.CheckForUpdates()
 		if err != nil {
 			return err
+		}
+
+		availableUpdates := len(updates)
+		if availableUpdates != m.availableUpdates {
+			err = m.HomeAssistant.PostState(
+				homeassistant.EntityState[map[string]any]{
+					EntityID: "sensor.updatemanager_available_updates",
+					State:    fmt.Sprintf("%d", len(updates)),
+					Attributes: map[string]any{
+						"unit_of_measurement": "updates",
+						"friendly_name":       "Available Updates",
+					},
+				},
+			)
+
+			if err != nil {
+				return err
+			}
 		}
 
 		if m.canMaintenance() && len(updates) > 0 {

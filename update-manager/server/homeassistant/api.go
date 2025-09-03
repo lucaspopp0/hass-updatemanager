@@ -39,6 +39,8 @@ type coreAPI interface {
 	GetStates() ([]EntityState[map[string]any], error)
 	GetState(entityID string) (*EntityState[map[string]any], error)
 
+	PostState(state EntityState[map[string]any]) error
+
 	// CallService executes POST /core/api/services/{servicePath}
 	// with the specified payload as the body if desired
 	CallService(servicePath string, payload any) (*http.Response, error)
@@ -142,6 +144,42 @@ func (c *apiClient) GetState(entityID string) (*EntityState[map[string]any], err
 	}
 
 	return &state, nil
+}
+
+func (c *apiClient) PostState(state EntityState[map[string]any]) error {
+	jsonBytes, err := json.Marshal(map[string]any{
+		"state":      state.State,
+		"attributes": state.Attributes,
+	})
+
+	if err != nil {
+		return fmt.Errorf("error marshaling request body: %w", err)
+	}
+
+	req, err := http.NewRequest(
+		http.MethodPost,
+		c.requestURL(fmt.Sprintf("core/api/states/%s", state.EntityID)),
+		bytes.NewReader(jsonBytes),
+	)
+	if err != nil {
+		return err
+	}
+
+	resp, err := c.do(req)
+	if err != nil {
+		return err
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return fmt.Errorf("error reading body: %w", err)
+	}
+
+	if resp.StatusCode >= 300 {
+		return fmt.Errorf("%v error: %s", resp.StatusCode, string(body))
+	}
+
+	return nil
 }
 
 func (c *apiClient) CallService(
