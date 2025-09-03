@@ -40,14 +40,15 @@ func (m *manager) Run() error {
 			return err
 		}
 
-		fmt.Printf("%v updates available\n", len(updates))
-
 		if m.canMaintenance() && len(updates) > 0 {
+			fmt.Printf("%v updates available. Installing now...\n", len(updates))
+
 			err = m.installUpdates(updates)
 			if err != nil {
 				return err
 			}
 
+			fmt.Println("Restarting...")
 			return m.HomeAssistant.Restart()
 		}
 
