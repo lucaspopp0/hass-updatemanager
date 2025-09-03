@@ -1,3 +1,3 @@
-# v0.0.26.0
- * [`0c257da`](https://github.com/lucaspopp0/hass-updatemanager/commit/0c257da) logs
+# v0.0.27.0
+ * [`09ebbfb`](https://github.com/lucaspopp0/hass-updatemanager/commit/09ebbfb) publish state
 
