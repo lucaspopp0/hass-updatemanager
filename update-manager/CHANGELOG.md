@@ -1,3 +1,3 @@
-# v0.0.37.0
- * [`6fa6383`](https://github.com/lucaspopp0/hass-updatemanager/commit/6fa6383) chore(deps): update golang docker tag to v1.26.2 (#19)
+# v0.0.38.0
+ * [`e83c281`](https://github.com/lucaspopp0/hass-updatemanager/commit/e83c281) Update golang Docker tag to v1.26.3 (#20)
 
