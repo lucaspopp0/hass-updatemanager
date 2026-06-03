@@ -1,3 +1,3 @@
-# v0.0.38.0
- * [`e83c281`](https://github.com/lucaspopp0/hass-updatemanager/commit/e83c281) Update golang Docker tag to v1.26.3 (#20)
+# v0.0.39.0
+ * [`af4624a`](https://github.com/lucaspopp0/hass-updatemanager/commit/af4624a) Update docker to v1.26.4 (#21)
 
