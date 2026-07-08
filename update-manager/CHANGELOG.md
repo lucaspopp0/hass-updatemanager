@@ -1,3 +1,3 @@
-# v0.0.85.0
- * [`aab8314`](https://github.com/lucaspopp0/hass-updatemanager/commit/aab8314) [bot] v0.0.85.0
+# v0.0.86.0
+ * [`0ec7111`](https://github.com/lucaspopp0/hass-updatemanager/commit/0ec7111) [bot] v0.0.85.0
 
