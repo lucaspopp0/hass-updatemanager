@@ -1,3 +1,3 @@
-# v0.0.385.0
- * [`fd69f38`](https://github.com/lucaspopp0/hass-updatemanager/commit/fd69f38) [bot] v0.0.385.0
+# v0.0.386.0
+ * [`9679256`](https://github.com/lucaspopp0/hass-updatemanager/commit/9679256) [bot] v0.0.385.0
 
