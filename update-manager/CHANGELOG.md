@@ -1,3 +1,3 @@
-# v0.0.323.0
- * [`dc33108`](https://github.com/lucaspopp0/hass-updatemanager/commit/dc33108) [bot] v0.0.323.0
+# v0.0.324.0
+ * [`79a76ae`](https://github.com/lucaspopp0/hass-updatemanager/commit/79a76ae) [bot] v0.0.323.0
 
