@@ -1,3 +1,3 @@
-# v0.0.364.0
- * [`dd38097`](https://github.com/lucaspopp0/hass-updatemanager/commit/dd38097) [bot] v0.0.364.0
+# v0.0.365.0
+ * [`e50db38`](https://github.com/lucaspopp0/hass-updatemanager/commit/e50db38) [bot] v0.0.364.0
 
