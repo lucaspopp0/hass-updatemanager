@@ -1,3 +1,3 @@
-# v0.0.159.0
- * [`23077f8`](https://github.com/lucaspopp0/hass-updatemanager/commit/23077f8) [bot] v0.0.159.0
+# v0.0.160.0
+ * [`ce2eacc`](https://github.com/lucaspopp0/hass-updatemanager/commit/ce2eacc) [bot] v0.0.159.0
 
