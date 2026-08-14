@@ -1,4 +1,4 @@
-version: "0.0.184.0"
+version: "0.0.185.0"
 name: "Update Manager"
 description: "Configurable update automations"
 slug: "update-manager"

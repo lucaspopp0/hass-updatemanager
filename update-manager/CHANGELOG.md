@@ -1,3 +1,3 @@
-# v0.0.184.0
- * [`389b034`](https://github.com/lucaspopp0/hass-updatemanager/commit/389b034) [bot] v0.0.184.0
+# v0.0.185.0
+ * [`cac5003`](https://github.com/lucaspopp0/hass-updatemanager/commit/cac5003) [bot] v0.0.184.0
 
