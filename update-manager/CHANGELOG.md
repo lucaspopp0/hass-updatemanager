@@ -1,3 +1,3 @@
-# v0.0.199.0
- * [`ea07bc4`](https://github.com/lucaspopp0/hass-updatemanager/commit/ea07bc4) [bot] v0.0.199.0
+# v0.0.200.0
+ * [`5070deb`](https://github.com/lucaspopp0/hass-updatemanager/commit/5070deb) [bot] v0.0.199.0
 
