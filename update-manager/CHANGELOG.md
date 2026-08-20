@@ -1,3 +1,3 @@
-# v0.0.1047.0
- * [`ff8dadd`](https://github.com/lucaspopp0/hass-updatemanager/commit/ff8dadd) [bot] v0.0.1047.0
+# v0.0.1048.0
+ * [`47e47d9`](https://github.com/lucaspopp0/hass-updatemanager/commit/47e47d9) [bot] v0.0.1047.0
 
