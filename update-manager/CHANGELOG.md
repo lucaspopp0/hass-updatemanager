@@ -1,3 +1,3 @@
-# v0.0.489.0
- * [`beaf1ad`](https://github.com/lucaspopp0/hass-updatemanager/commit/beaf1ad) [bot] v0.0.489.0
+# v0.0.490.0
+ * [`1f6509b`](https://github.com/lucaspopp0/hass-updatemanager/commit/1f6509b) [bot] v0.0.489.0
 
