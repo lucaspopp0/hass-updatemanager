@@ -1,3 +1,3 @@
-# v0.0.806.0
- * [`eba400c`](https://github.com/lucaspopp0/hass-updatemanager/commit/eba400c) [bot] v0.0.806.0
+# v0.0.807.0
+ * [`15758e8`](https://github.com/lucaspopp0/hass-updatemanager/commit/15758e8) [bot] v0.0.806.0
 
