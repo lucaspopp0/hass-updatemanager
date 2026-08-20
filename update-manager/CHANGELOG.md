@@ -1,3 +1,3 @@
-# v0.0.910.0
- * [`aabc511`](https://github.com/lucaspopp0/hass-updatemanager/commit/aabc511) [bot] v0.0.910.0
+# v0.0.911.0
+ * [`414dd4b`](https://github.com/lucaspopp0/hass-updatemanager/commit/414dd4b) [bot] v0.0.910.0
 
