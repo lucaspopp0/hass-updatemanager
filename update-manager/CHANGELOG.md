@@ -1,3 +1,3 @@
-# v0.0.996.0
- * [`dbcc0bb`](https://github.com/lucaspopp0/hass-updatemanager/commit/dbcc0bb) [bot] v0.0.996.0
+# v0.0.997.0
+ * [`b69545b`](https://github.com/lucaspopp0/hass-updatemanager/commit/b69545b) [bot] v0.0.996.0
 
