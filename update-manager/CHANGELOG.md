@@ -1,3 +1,3 @@
-# v0.0.401.0
- * [`adf8fa6`](https://github.com/lucaspopp0/hass-updatemanager/commit/adf8fa6) [bot] v0.0.401.0
+# v0.0.402.0
+ * [`ab81d26`](https://github.com/lucaspopp0/hass-updatemanager/commit/ab81d26) [bot] v0.0.401.0
 
