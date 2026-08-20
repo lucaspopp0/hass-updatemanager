@@ -1,3 +1,3 @@
-# v0.0.854.0
- * [`ddba295`](https://github.com/lucaspopp0/hass-updatemanager/commit/ddba295) [bot] v0.0.854.0
+# v0.0.855.0
+ * [`43b4afb`](https://github.com/lucaspopp0/hass-updatemanager/commit/43b4afb) [bot] v0.0.854.0
 
