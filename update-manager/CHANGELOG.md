@@ -1,3 +1,3 @@
 # v0.0.808.0
- * [`c2bddac`](https://github.com/lucaspopp0/hass-updatemanager/commit/c2bddac) [bot] v0.0.807.0
+ * [`6b43cd6`](https://github.com/lucaspopp0/hass-updatemanager/commit/6b43cd6) [bot] v0.0.808.0
 
