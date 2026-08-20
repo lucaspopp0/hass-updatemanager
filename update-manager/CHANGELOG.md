@@ -1,3 +1,3 @@
-# v0.0.874.0
- * [`adafcc7`](https://github.com/lucaspopp0/hass-updatemanager/commit/adafcc7) [bot] v0.0.874.0
+# v0.0.875.0
+ * [`4579d66`](https://github.com/lucaspopp0/hass-updatemanager/commit/4579d66) [bot] v0.0.874.0
 
