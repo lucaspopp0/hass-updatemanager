@@ -1,3 +1,3 @@
 # v0.0.1699.0
- * [`fda997f`](https://github.com/lucaspopp0/hass-updatemanager/commit/fda997f) [bot] v0.0.1698.0
+ * [`14f7f0a`](https://github.com/lucaspopp0/hass-updatemanager/commit/14f7f0a) [bot] v0.0.1699.0
 
