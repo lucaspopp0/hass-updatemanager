@@ -1,3 +1,3 @@
-# v0.0.1250.0
- * [`ccbabba`](https://github.com/lucaspopp0/hass-updatemanager/commit/ccbabba) [bot] v0.0.1250.0
+# v0.0.1251.0
+ * [`aceca2b`](https://github.com/lucaspopp0/hass-updatemanager/commit/aceca2b) [bot] v0.0.1250.0
 
