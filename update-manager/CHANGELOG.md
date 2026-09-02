@@ -1,3 +1,3 @@
-# v0.0.1580.0
- * [`cdaf794`](https://github.com/lucaspopp0/hass-updatemanager/commit/cdaf794) [bot] v0.0.1580.0
+# v0.0.1581.0
+ * [`caab090`](https://github.com/lucaspopp0/hass-updatemanager/commit/caab090) [bot] v0.0.1580.0
 
