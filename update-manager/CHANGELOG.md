@@ -1,3 +1,3 @@
-# v0.0.1273.0
- * [`edfa18a`](https://github.com/lucaspopp0/hass-updatemanager/commit/edfa18a) [bot] v0.0.1273.0
+# v0.0.1274.0
+ * [`da90f58`](https://github.com/lucaspopp0/hass-updatemanager/commit/da90f58) [bot] v0.0.1273.0
 
