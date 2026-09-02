@@ -1,3 +1,3 @@
-# v0.0.1097.0
- * [`ffa1004`](https://github.com/lucaspopp0/hass-updatemanager/commit/ffa1004) [bot] v0.0.1097.0
+# v0.0.1098.0
+ * [`28cf672`](https://github.com/lucaspopp0/hass-updatemanager/commit/28cf672) [bot] v0.0.1097.0
 
