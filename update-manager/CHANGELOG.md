@@ -1,3 +1,3 @@
-# v0.0.1213.0
- * [`7df7429`](https://github.com/lucaspopp0/hass-updatemanager/commit/7df7429) [bot] v0.0.1213.0
+# v0.0.1214.0
+ * [`ffc5519`](https://github.com/lucaspopp0/hass-updatemanager/commit/ffc5519) [bot] v0.0.1213.0
 
