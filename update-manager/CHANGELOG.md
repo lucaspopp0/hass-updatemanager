@@ -1,3 +1,3 @@
 # v0.0.1645.0
- * [`99a2db9`](https://github.com/lucaspopp0/hass-updatemanager/commit/99a2db9) [bot] v0.0.1644.0
+ * [`c30b973`](https://github.com/lucaspopp0/hass-updatemanager/commit/c30b973) [bot] v0.0.1645.0
 
