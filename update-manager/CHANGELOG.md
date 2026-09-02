@@ -1,3 +1,3 @@
-# v0.0.1568.0
- * [`dba195b`](https://github.com/lucaspopp0/hass-updatemanager/commit/dba195b) [bot] v0.0.1568.0
+# v0.0.1569.0
+ * [`be61518`](https://github.com/lucaspopp0/hass-updatemanager/commit/be61518) [bot] v0.0.1568.0
 
