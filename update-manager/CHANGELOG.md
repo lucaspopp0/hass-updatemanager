@@ -1,3 +1,3 @@
-# v0.0.1124.0
- * [`cbed18e`](https://github.com/lucaspopp0/hass-updatemanager/commit/cbed18e) [bot] v0.0.1124.0
+# v0.0.1125.0
+ * [`1790900`](https://github.com/lucaspopp0/hass-updatemanager/commit/1790900) [bot] v0.0.1124.0
 
