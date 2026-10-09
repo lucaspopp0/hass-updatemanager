@@ -1,3 +1,3 @@
-# v0.0.1980.0
- * [`edba7dcf`](https://github.com/lucaspopp0/hass-updatemanager/commit/edba7dcf) [bot] v0.0.1980.0
+# v0.0.1981.0
+ * [`96843d3c`](https://github.com/lucaspopp0/hass-updatemanager/commit/96843d3c) [bot] v0.0.1980.0
 
