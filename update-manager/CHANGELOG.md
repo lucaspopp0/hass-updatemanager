@@ -1,3 +1,3 @@
-# v0.0.1751.2
- * [`a019e09`](https://github.com/lucaspopp0/hass-updatemanager/commit/a019e09) Update golang Docker tag to v1.27.2 (#26)
+# v0.0.1751.0
+ * [`1710959`](https://github.com/lucaspopp0/hass-updatemanager/commit/1710959) [bot] v0.0.1751.2
 
