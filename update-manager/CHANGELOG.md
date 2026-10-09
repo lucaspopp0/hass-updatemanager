@@ -1,3 +1,3 @@
-# v0.0.1975.0
- * [`f767cfb4`](https://github.com/lucaspopp0/hass-updatemanager/commit/f767cfb4) [bot] v0.0.1975.0
+# v0.0.1976.0
+ * [`86ada11e`](https://github.com/lucaspopp0/hass-updatemanager/commit/86ada11e) [bot] v0.0.1975.0
 
