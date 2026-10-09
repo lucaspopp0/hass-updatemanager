@@ -1,3 +1,3 @@
-# v0.0.1998.0
- * [`c2cfdd56`](https://github.com/lucaspopp0/hass-updatemanager/commit/c2cfdd56) [bot] v0.0.1998.0
+# v0.0.1999.0
+ * [`827afcaf`](https://github.com/lucaspopp0/hass-updatemanager/commit/827afcaf) [bot] v0.0.1998.0
 
