@@ -1,3 +1,3 @@
 # v0.0.1979.0
- * [`f8211dab`](https://github.com/lucaspopp0/hass-updatemanager/commit/f8211dab) [bot] v0.0.1978.0
+ * [`fe2f1822`](https://github.com/lucaspopp0/hass-updatemanager/commit/fe2f1822) [bot] v0.0.1979.0
 
