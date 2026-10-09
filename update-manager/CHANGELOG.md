@@ -1,3 +1,3 @@
 # v0.0.2248.0
- * [`adcf9070`](https://github.com/lucaspopp0/hass-updatemanager/commit/adcf9070) [bot] v0.0.2247.0
+ * [`6d497ddb`](https://github.com/lucaspopp0/hass-updatemanager/commit/6d497ddb) [bot] v0.0.2248.0
 
