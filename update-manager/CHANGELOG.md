@@ -1,3 +1,3 @@
 # v0.0.2403.0
- * [`bc150eed`](https://github.com/lucaspopp0/hass-updatemanager/commit/bc150eed) [bot] v0.0.2402.0
+ * [`5763efda`](https://github.com/lucaspopp0/hass-updatemanager/commit/5763efda) [bot] v0.0.2403.0
 
