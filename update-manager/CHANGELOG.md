@@ -1,3 +1,3 @@
 # v0.0.2623.0
- * [`b8018def`](https://github.com/lucaspopp0/hass-updatemanager/commit/b8018def) [bot] v0.0.2622.0
+ * [`77b6499c`](https://github.com/lucaspopp0/hass-updatemanager/commit/77b6499c) [bot] v0.0.2623.0
 
