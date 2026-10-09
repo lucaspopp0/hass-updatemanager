@@ -1,3 +1,3 @@
-# v0.0.2569.0
- * [`db2c9431`](https://github.com/lucaspopp0/hass-updatemanager/commit/db2c9431) [bot] v0.0.2569.0
+# v0.0.2570.0
+ * [`48905b8a`](https://github.com/lucaspopp0/hass-updatemanager/commit/48905b8a) [bot] v0.0.2569.0
 
