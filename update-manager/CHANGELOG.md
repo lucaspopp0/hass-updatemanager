@@ -1,3 +1,3 @@
 # v0.0.1762.0
- * [`deb2c4f`](https://github.com/lucaspopp0/hass-updatemanager/commit/deb2c4f) [bot] v0.0.1761.0
+ * [`5a3b9a2`](https://github.com/lucaspopp0/hass-updatemanager/commit/5a3b9a2) [bot] v0.0.1762.0
 
