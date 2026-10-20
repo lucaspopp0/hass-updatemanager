@@ -1,3 +1,3 @@
-# v0.0.2806.0
- * [`dac29950`](https://github.com/lucaspopp0/hass-updatemanager/commit/dac29950) [bot] v0.0.2806.0
+# v0.0.2807.0
+ * [`38f475e5`](https://github.com/lucaspopp0/hass-updatemanager/commit/38f475e5) [bot] v0.0.2806.0
 
