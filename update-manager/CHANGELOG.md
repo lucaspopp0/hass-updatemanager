@@ -1,3 +1,3 @@
-# v0.0.3968.0
- * [`dcafe2ec`](https://github.com/lucaspopp0/hass-updatemanager/commit/dcafe2ec) [bot] v0.0.3968.0
+# v0.0.3969.0
+ * [`0de29fce`](https://github.com/lucaspopp0/hass-updatemanager/commit/0de29fce) [bot] v0.0.3968.0
 
