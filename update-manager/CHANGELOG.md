@@ -1,3 +1,3 @@
-# v0.0.3458.0
- * [`39836d97`](https://github.com/lucaspopp0/hass-updatemanager/commit/39836d97) [bot] v0.0.3458.0
+# v0.0.3459.0
+ * [`adb4da68`](https://github.com/lucaspopp0/hass-updatemanager/commit/adb4da68) [bot] v0.0.3458.0
 
