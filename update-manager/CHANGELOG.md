@@ -1,3 +1,3 @@
-# v0.0.3818.0
- * [`08bacab0`](https://github.com/lucaspopp0/hass-updatemanager/commit/08bacab0) [bot] v0.0.3818.0
+# v0.0.3819.0
+ * [`b0661dce`](https://github.com/lucaspopp0/hass-updatemanager/commit/b0661dce) [bot] v0.0.3818.0
 
