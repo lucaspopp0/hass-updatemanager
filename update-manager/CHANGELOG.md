@@ -1,3 +1,3 @@
-# v0.0.3342.0
- * [`fec02488`](https://github.com/lucaspopp0/hass-updatemanager/commit/fec02488) [bot] v0.0.3342.0
+# v0.0.3343.0
+ * [`fcec0ccf`](https://github.com/lucaspopp0/hass-updatemanager/commit/fcec0ccf) [bot] v0.0.3342.0
 
