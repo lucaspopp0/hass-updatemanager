@@ -1,3 +1,3 @@
-# v0.0.3517.0
- * [`64730832`](https://github.com/lucaspopp0/hass-updatemanager/commit/64730832) [bot] v0.0.3517.0
+# v0.0.3518.0
+ * [`ee4ed958`](https://github.com/lucaspopp0/hass-updatemanager/commit/ee4ed958) [bot] v0.0.3517.0
 
