@@ -1,3 +1,3 @@
-# v0.0.3625.0
- * [`bcddbace`](https://github.com/lucaspopp0/hass-updatemanager/commit/bcddbace) [bot] v0.0.3625.0
+# v0.0.3626.0
+ * [`d0ed2960`](https://github.com/lucaspopp0/hass-updatemanager/commit/d0ed2960) [bot] v0.0.3625.0
 
