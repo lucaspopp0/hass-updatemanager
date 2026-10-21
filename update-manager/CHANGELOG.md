@@ -1,3 +1,3 @@
-# v0.0.3695.0
- * [`efba910c`](https://github.com/lucaspopp0/hass-updatemanager/commit/efba910c) [bot] v0.0.3695.0
+# v0.0.3696.0
+ * [`75bab029`](https://github.com/lucaspopp0/hass-updatemanager/commit/75bab029) [bot] v0.0.3695.0
 
