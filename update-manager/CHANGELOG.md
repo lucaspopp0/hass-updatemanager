@@ -1,3 +1,3 @@
 # v0.0.4607.0
- * [`edcbf020`](https://github.com/lucaspopp0/hass-updatemanager/commit/edcbf020) [bot] v0.0.4606.0
+ * [`7782c85b`](https://github.com/lucaspopp0/hass-updatemanager/commit/7782c85b) [bot] v0.0.4607.0
 
