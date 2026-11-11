@@ -1,3 +1,3 @@
-# v0.0.5343.0
- * [`bedd735f`](https://github.com/lucaspopp0/hass-updatemanager/commit/bedd735f) [bot] v0.0.5343.0
+# v0.0.5344.0
+ * [`f10054c9`](https://github.com/lucaspopp0/hass-updatemanager/commit/f10054c9) [bot] v0.0.5343.0
 
