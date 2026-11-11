@@ -1,3 +1,3 @@
-# v0.0.4368.0
- * [`e78cee64`](https://github.com/lucaspopp0/hass-updatemanager/commit/e78cee64) [bot] v0.0.4368.0
+# v0.0.4369.0
+ * [`24e79063`](https://github.com/lucaspopp0/hass-updatemanager/commit/24e79063) [bot] v0.0.4368.0
 
