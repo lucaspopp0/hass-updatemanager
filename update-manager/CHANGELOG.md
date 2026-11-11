@@ -1,3 +1,3 @@
 # v0.0.5468.0
- * [`900cab75`](https://github.com/lucaspopp0/hass-updatemanager/commit/900cab75) [bot] v0.0.5467.0
+ * [`e6a8a318`](https://github.com/lucaspopp0/hass-updatemanager/commit/e6a8a318) [bot] v0.0.5468.0
 
