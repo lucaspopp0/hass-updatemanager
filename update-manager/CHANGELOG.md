@@ -1,3 +1,3 @@
-# v0.0.5506.0
- * [`deef1f1f`](https://github.com/lucaspopp0/hass-updatemanager/commit/deef1f1f) [bot] v0.0.5506.0
+# v0.0.5507.0
+ * [`ce1e6112`](https://github.com/lucaspopp0/hass-updatemanager/commit/ce1e6112) [bot] v0.0.5506.0
 
