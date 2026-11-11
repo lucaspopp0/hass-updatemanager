@@ -1,3 +1,3 @@
 # v0.0.4366.0
- * [`cebb72e1`](https://github.com/lucaspopp0/hass-updatemanager/commit/cebb72e1) [bot] v0.0.4365.0
+ * [`8e62a797`](https://github.com/lucaspopp0/hass-updatemanager/commit/8e62a797) [bot] v0.0.4366.0
 
